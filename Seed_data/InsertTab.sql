@@ -128,29 +128,15 @@ INSERT INTO `Set` (name, opus_nummer) VALUES
 	('Dreamlike Oceans',28);
 
 	
-SELECT * FROM type;
-SELECT * FROM job;
-SELECT * FROM `set`;
-	
-SELECT * FROM karte;
-SELECT * FROM element;
-		
-
-	
-SELECT * FROM effekt;
-
-
-	
 	
 SELECT*FROM karte;
-SELECT karte.name AS Name, type.name AS Typ, job.`name` AS 'Job', `Set`.`name` AS SETNAME, `Set`.opus_nummer AS OPUSNR
+SELECT karte.name AS Name, type.name AS Typ, job.`name` AS 'Job', `Set`.`name` AS SETNAME, `Set`.opus_nummer AS OPUSNR, karte.`Power`, karte.Category, karte.Serial_Nr, karte.Serial_Type, `Element`.`name` AS 'Element', `Effekt`.`TEXT` AS 'Effekt'
 FROM karte
 JOIN type ON karte.TypeID = type.TypeID
 JOIN job ON karte.JobID = job.JobID
-JOIN `set` ON karte.SetID = set.SetID;
-	
-	
-	
-	
-	
+JOIN `set` ON karte.SetID = set.SetID
+JOIN kartenelement ON karte.KartenID = kartenelement.KartenID
+JOIN element ON kartenelement.ElementID = element.ElementID
+JOIN karteneffekt ON karte.KartenID = karteneffekt.KartenID
+JOIN effekt ON karteneffekt.EffektID = effekt.EffektID	
 	
