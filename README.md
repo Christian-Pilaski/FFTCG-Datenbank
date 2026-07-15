@@ -27,4 +27,4 @@
 - seed_data "Hier werden die ganzen benötigten daten zum erstellen von neuen Karten gespeichert"
 
 # Status / Fortschritt
-- "Aktuell eingepflegt: 3 von 219 Karten aus Opus I"
+- "Aktuell eingepflegt: 10 von 219 Karten aus Opus I"
